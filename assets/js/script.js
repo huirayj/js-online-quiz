@@ -154,7 +154,7 @@ const countdown = () => {
     if (timeLeft === 0) {
       showScores();
       clearInterval(timeInterval);
-      element.textContent = `Time's up!`;
+      progressEle.textContent = `Time's up!`;
     };
   }, 1000);
 }

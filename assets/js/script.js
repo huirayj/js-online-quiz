@@ -119,9 +119,7 @@ const renderQuestion = (question) => {
       button.textContent = answer.text;
       button.classList.add('btn');
 
-      if (answer.correct) {
-        button.dataset.correct = answer.correct;
-      }
+      answer.correct && (button.dataset.correct = answer.correct);
 
       button.addEventListener('click', selectAnswer);
       answerContainer.appendChild(button);

@@ -10,7 +10,8 @@ let nameInput = document.querySelector("#name");
 let scoreEle = document.querySelector('#score');
 let progressEle = document.querySelector("#progress");
 
-let randomQuestions, questionIndex, timeLeft, timeInterval, scoreboard;
+let randomQuestions, questionIndex, timeLeft, timeInterval;
+let scoreboard = JSON.parse(localStorage.getItem("userScore")) || [];
 
 let questionBank = [
   {
@@ -160,25 +161,19 @@ const countdown = () => {
 }
 
 const displayHighScore = () => {
-  let liEle = document.createElement("li");
-
-  let highScore = JSON.parse(localStorage.getItem("userScore"));
-
-  highScore.forEach(item => {
+  scoreboard.forEach(item => {
+    let liEle = document.createElement("li");
     liEle.textContent = `${item.name}: ${item.score}`;
     olEle.appendChild(liEle);
   });
 }
 
 function clearHighScore() {
-  while (olEle.firstChild) {
-    olEle.removeChild(olEle.firstChild);
-  }
+  olEle.innerHTML = "";
+  localStorage.removeItem("userScore");
 }
 
 const submit = (e) => {
-  scoreboard = [];
-
   e.preventDefault();
   scoreboard.push({
     name: nameInput.value.trim(),

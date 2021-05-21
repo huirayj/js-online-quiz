@@ -15,18 +15,25 @@ body {
     background-color: darkslateblue;
 }
 
+footer {
+    margin: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     width: 900px;
     max-width: 75%;
     background-color: white;
     padding: 10px;
-    border-radius: 20px;
-}
-
-#question {
-    text-align: center;
-    font-size: 1.5em;
-    margin: 10px 0 10px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 15px black;
 }
 
 .btn-container {
@@ -40,24 +47,20 @@ body {
     background-color: darkslateblue;
     padding: 5px 10px;
     color: white;
-    box-shadow: 0px 0px 3px black;
+    box-shadow: 0px 0px 5px black;
+    border-radius: 10px;
 }
 
 .btn:hover {
     border: 2px dotted lavender;
 }
 
-.start, .clear, .return {
-    font-size: 1.5rem;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin: 10px 0px 5px 0px;
-}
 
 .controls {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px 0 20px 0;
 }
 
 .hidden {
@@ -72,15 +75,33 @@ body {
     background-color: darkred;
 }
 
-footer {
-    margin: 10px;
+#question {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0 10px 0;
 }
 
-form {
-    display: flex;
-    justify-content: center;
+#progress {
+    margin-bottom: 0;
 }
 
-a, input, #submit {
+#quiz-container {
+    border: 2px solid darkslateblue;
+    box-shadow: 0 0 5px black;
+    border-radius: 10px;
+    min-height: 100px;
+    font-weight: bold;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#start-btn, #clear-btn, #return-btn {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px 0px 5px 0px;
+}
+
+#highscore, #submit-btn, input {
     margin: 0 5px 0 5px;
 }

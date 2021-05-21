@@ -10,12 +10,12 @@
 </head>
 <body>
     <div class="container">
-        <header id="quiz">
+        <header>
             <h1 id="header">Javascript Speed Quiz</h1>
         </header>
         <div id="quiz-content" class="hidden">
             <div id="question">Question</div>
-            <div id="answer" class="btn-container">
+            <div id="answer-container" class="btn-container">
                 <button class="btn" id="answer-btn"></button>
                 <button class="btn" id="answer-btn"></button>
                 <button class="btn" id="answer-btn"></button>
@@ -23,15 +23,17 @@
             </div>
         </div>
         <div class="controls">
-            <button id="start" class="start-btn btn">Start</button>
+            <button id="start-btn" class="start btn">Start</button>
         </div>
         <footer>
             <p id="progress">Time remaining: </p>
             <form id="score" class="hidden">
-                <a href="highscore.html">Top Scores</a>
                 <input type="text" name="name" id="name" placeholder="Enter your name">
-                <button id="submit">Submit</button>
+                <button id="submit-btn" class="btn">Submit</button>
             </form>
+            <a href="highscore.html">
+                <button class="btn">High Scores</button>
+            </a>
         </footer>
     </div>
 </body>

@@ -11,7 +11,7 @@ In the following exercise, the task was to employ web API's and local storage to
 4. Assigning the correct answer index to respective buttons and implementing a condition for incorrect choices.
 5. Storing the remaining time as a variable to be used as a score and capturing user name input.
 6. Storing the name and score locally.
-7. Having a way to display the high score as a separate html page.
+7. Displaying the high score as a separate html page.
 
 # Links
 - https://huirayj.github.io/js-online-quiz/
@@ -23,11 +23,12 @@ In the following exercise, the task was to employ web API's and local storage to
 - https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener
 - https://www.w3schools.com/js/js_timing.asp
 - https://www.digitalocean.com/community/tutorials/js-json-parse-stringify
+- https://www.geeksforgeeks.org/javascript-short-circuiting/
 
 # Screenshots
-Quiz screen
+## Quiz screen
 ![Quiz question](https://github.com/huirayj/js-online-quiz/blob/main/assets/screenshots/screenshot-question.png)
-Result screen
+## Result screen
 ![Game over](https://github.com/huirayj/js-online-quiz/blob/main/assets/screenshots/screenshot-result.png)
-High score screen
+## High score screen
 ![High score](https://github.com/huirayj/js-online-quiz/raw/main/assets/screenshots/screenshot-highscore.png)

@@ -1,18 +1,18 @@
-var startButton = document.querySelector('#start');
-var submitButton = document.querySelector('#submit');
-var answerButtons = document.querySelector('#answer');
-var clearButton = document.querySelector('#clear');
+let startButton = document.querySelector('#start');
+let submitButton = document.querySelector('#submit');
+let answerButtons = document.querySelector('#answer');
+let clearButton = document.querySelector('#clear');
 
-var h1Ele = document.querySelector("h1");
-var olEle = document.querySelector('ol');
-var questionEle = document.querySelector('#question');
-var nameInput = document.querySelector("#name");
-var scoreEle = document.querySelector('#score');
-var progressEle = document.querySelector("#progress");
+let h1Ele = document.querySelector("h1");
+let olEle = document.querySelector('ol');
+let questionEle = document.querySelector('#question');
+let nameInput = document.querySelector("#name");
+let scoreEle = document.querySelector('#score');
+let progressEle = document.querySelector("#progress");
 
-var randomQuestions, questionIndex, timeLeft, timeInterval, penalty, scoreboard;
+let randomQuestions, questionIndex, timeLeft, timeInterval, scoreboard;
 
-var questions = [
+let questionBank = [
   {
     question: 'What is negative infinity?',
     answers: [
@@ -70,7 +70,7 @@ var questions = [
 ];
 
 const startQuiz = () => {
-  var quizContainerEle = document.querySelector("#quiz-content");
+  let quizContainerEle = document.querySelector("#quiz-content");
 
   timeLeft = 30;
   progressEle.textContent = `Time remaining: ${timeLeft || 30}`;
@@ -80,24 +80,24 @@ const startQuiz = () => {
   scoreEle.classList.add('hidden');
   quizContainerEle.classList.remove('hidden');
   answerButtons.classList.remove('hidden');
-  randomQuestions = questions.sort(() => Math.random() - 0.5);
+  randomQuestions = questionBank.sort(() => Math.random() - 0.5);
   questionIndex = 0;
   penalty = 0;
   nextQuestion();
   countdown();
 }
-
+// removes excess answer buttons
 const nextQuestion = () => {
   while (answerButtons.firstChild) {
     answerButtons.removeChild(answerButtons.firstChild);
   }
   renderQuestion(randomQuestions[questionIndex]);
 }
-
+// display question
 const renderQuestion = (question) => {
   questionEle.textContent = question.question;
   question.answers.forEach(answer => {
-    var button = document.createElement('button');
+    let button = document.createElement('button');
     button.textContent = answer.text;
     button.classList.add('btn');
     if (answer.correct) {
@@ -109,8 +109,8 @@ const renderQuestion = (question) => {
 }
 
 const selectAnswer = (e) => {
-  var selectedButton = e.target;
-  var correct = selectedButton.dataset.correct;
+  let selectedButton = e.target;
+  let correct = selectedButton.dataset.correct;
 
   if (!correct) { timeLeft -= 5; }
 
@@ -126,7 +126,7 @@ const selectAnswer = (e) => {
   questionIndex++;
   nextQuestion();
 }
-
+// changes background depending on correct answer
 const feedback = (ele, correct) => {
   ele.classList.remove('correct');
   ele.classList.remove('wrong');
@@ -160,9 +160,9 @@ const countdown = () => {
 }
 
 const displayHighScore = () => {
-  var liEle = document.createElement("li");
+  let liEle = document.createElement("li");
 
-  var highScore = JSON.parse(localStorage.getItem("userScore"));
+  let highScore = JSON.parse(localStorage.getItem("userScore"));
 
   highScore.forEach(item => {
     liEle.textContent = `${item.name}: ${item.score}`;

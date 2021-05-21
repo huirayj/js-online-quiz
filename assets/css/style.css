@@ -1,11 +1,8 @@
-:root {
-    --hue-neutral: 200;
-    --hue-wrong: 0;
-    --hue-correct: 145;
+header {
+    text-align: center;
 }
 
 body {
-    --hue: var(--hue-neutral);
     box-sizing: border-box;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
@@ -15,41 +12,46 @@ body {
     align-items: center;
     padding: 0;
     margin: 0;
-    background-color: hsl(var(--hue), 100%, 20%);
+    background-color: darkslateblue;
 }
 
 .container {
-    width: 800px;
-    max-width: 80%;
+    width: 900px;
+    max-width: 75%;
     background-color: white;
     padding: 10px;
-    box-shadow: 0 0 10px 2px;
+    border-radius: 20px;
 }
 
-.btn-grid {
+#question {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 10px 0 10px 0;
+}
+
+.btn-container {
     display: grid;
     grid-template-columns: repeat(2, auto);
-    gap: 10px;
-    margin: 20px 0;
+    gap: 8px;
+    margin: 20px;
 }
 
-button {
-    --hue: var(--hue-neutral);
-    border: 1px solid hsl(var(--hue), 100%, 30%);
-    background-color: hsl(var(--hue), 100%, 50%);
+.btn {
+    background-color: darkslateblue;
     padding: 5px 10px;
     color: white;
-    outline: none;
+    box-shadow: 0px 0px 3px black;
 }
 
 .btn:hover {
-    border-color: black;
+    border: 2px dotted lavender;
 }
 
-.start {
+.start, .clear, .return {
     font-size: 1.5rem;
     font-weight: bold;
     padding: 10px 20px;
+    margin: 10px 0px 5px 0px;
 }
 
 .controls {
@@ -60,4 +62,25 @@ button {
 
 .hidden {
     display: none;
+}
+
+.correct {
+    background-color: darkgreen;
+}
+
+.wrong {
+    background-color: darkred;
+}
+
+footer {
+    margin: 10px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+a, input, #submit {
+    margin: 0 5px 0 5px;
 }

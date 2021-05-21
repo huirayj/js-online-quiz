@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/css/style2.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
     <script defer src="./Assets/js/script.js"></script>
     <title>Quiz App</title>
 </head>
@@ -12,11 +12,10 @@
     <div class="container">
         <header id="quiz">
             <h1 id="header">Javascript Speed Quiz</h1>
-            <h2></h2>
         </header>
         <div id="quiz-content" class="hidden">
             <div id="question">Question</div>
-            <div id="answer" class="btn-grid">
+            <div id="answer" class="btn-container">
                 <button class="btn" id="answer-btn"></button>
                 <button class="btn" id="answer-btn"></button>
                 <button class="btn" id="answer-btn"></button>
@@ -26,14 +25,14 @@
         <div class="controls">
             <button id="start" class="start-btn btn">Start</button>
         </div>
+        <footer>
+            <p id="progress">Time remaining: </p>
+            <form id="score" class="hidden">
+                <a href="highscore.html">Top Scores</a>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+                <button id="submit">Submit</button>
+            </form>
+        </footer>
     </div>
-    <footer >
-        <p id="progress">Time remaining: </p>
-        <form id="score" class="hidden">
-            <a href="highscore.html">Top Scores</a>
-            <input type="text" name="name" id="name" placeholder="Enter your name">
-            <button id="submit">Submit</button>
-        </form>
-    </footer>
 </body>
 </html>

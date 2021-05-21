@@ -4,19 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+    <script defer src="./Assets/js/script.js"></script>
     <title>High Score</title>
 </head>
-<body>
+<body onload=displayHighScore()>
     <div class="container">
-        <header id="header">
-            <h1>Highscore</h1>
+        <header id="quiz">
+            <h1 id="header">High Score</h1>
+            <h2></h2>
         </header>
-        <main id="quiz-container">
+        <div id="quiz-container">
             <ol id="#highScores"></ol>
-        </main>
+        </div>
         <div class="controls">
-            <a href="index.html"><button id="return-btn" class="return-btn btn">Return</button></a>
-            <button id="clear-btn" class="clear-btn btn hidden">Clear</button>
+            <a href="index2.html"><button id="return" class="return btn">Return</button></a>
+            <button id="clear" class="clear btn" onClick=clearHighScore()>Clear</button>
         </div>
     </div>
 </body>

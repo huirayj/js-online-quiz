@@ -4,34 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <script defer src="./assets/js/script.js"></script>
-    <title>Javascript Speed Quiz</title>
+    <link rel="stylesheet" href="./Assets/css/style2.css">
+    <script defer src="./Assets/js/script.js"></script>
+    <title>Quiz App</title>
 </head>
 <body>
     <div class="container">
-        <header id="header">
-            <h1>Javascript Speed Quiz</h1>
+        <header id="quiz">
+            <h1 id="header">Javascript Speed Quiz</h1>
+            <h2></h2>
         </header>
-        <main id="quiz-container" class="hidden">
-            <p id="question"></p>
-            <div id="answer-buttons" class="btn-grid">
-                <button class="btn" id="answer-button"></button>
-                <button class="btn" id="answer-button"></button>
-                <button class="btn" id="answer-button"></button>
-                <button class="btn" id="answer-button"></button>
+        <div id="quiz-content" class="hidden">
+            <div id="question">Question</div>
+            <div id="answer" class="btn-grid">
+                <button class="btn" id="answer-btn"></button>
+                <button class="btn" id="answer-btn"></button>
+                <button class="btn" id="answer-btn"></button>
+                <button class="btn" id="answer-btn"></button>
             </div>
-        </main>
-        <div class="start">
-            <button id="start" class="start btn"></button>
+        </div>
+        <div class="controls">
+            <button id="start" class="start-btn btn">Start</button>
         </div>
     </div>
-    <footer>
+    <footer >
         <p id="progress">Time remaining: </p>
-        <a href="highscore.html">High Scores</a>
         <form id="score" class="hidden">
+            <a href="highscore.html">Top Scores</a>
             <input type="text" name="name" id="name" placeholder="Enter your name">
-            <button id="submit" class="submit btn">Submit</button>
+            <button id="submit">Submit</button>
         </form>
     </footer>
 </body>

@@ -1,19 +1,19 @@
-let startButton = document.querySelector('#start-btn');
-let submitButton = document.querySelector('#submit-btn');
+const startButton = document.querySelector('#start-btn');
+const submitButton = document.querySelector('#submit-btn');
 
-let h1Ele = document.querySelector("h1");
-let bodyEle = document.querySelector('body');
-let olEle = document.querySelector('ol');
-let answerContainer = document.querySelector('#answer-container');
-let questionEle = document.querySelector('#question');
-let nameInput = document.querySelector("#name");
-let scoreEle = document.querySelector('#score');
-let progressEle = document.querySelector("#progress");
+const h1Ele = document.querySelector("h1");
+const bodyEle = document.querySelector('body');
+const olEle = document.querySelector('ol');
+const answerContainer = document.querySelector('#answer-container');
+const questionEle = document.querySelector('#question');
+const nameInput = document.querySelector("#name");
+const scoreEle = document.querySelector('#score');
+const progressEle = document.querySelector("#progress");
 
 let questionIndex, randomQuestions, timeLeft, timeInterval;
 let scoreboard = JSON.parse(localStorage.getItem("userScore")) || [];
 
-let questionBank = [
+const questionBank = [
   {
     question: 'What is negative infinity?',
     answers: [
@@ -114,7 +114,7 @@ const renderQuestion = (question) => {
     questionEle.textContent = question.question;
 
     question.answers.forEach(answer => {
-      let button = document.createElement('button');
+      const button = document.createElement('button');
 
       button.textContent = answer.text;
       button.classList.add('btn');
@@ -179,11 +179,11 @@ const submit = (e) => {
 
 const displayHighScore = () => {
   //also remove empty string names
-  var sortedScore = scoreboard.sort((a, b) => b.score - a.score)
+  let sortedScore = scoreboard.sort((a, b) => b.score - a.score)
     .filter(item => item.name.length !== 0);
 
   sortedScore.forEach(item => {
-    let liEle = document.createElement("li");
+    const liEle = document.createElement("li");
 
     liEle.textContent = `${item.name}: ${item.score}`;
     olEle.appendChild(liEle);

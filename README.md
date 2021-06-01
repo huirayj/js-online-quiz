@@ -17,7 +17,6 @@ In the following exercise, the task was to employ web API's and local storage to
 - https://huirayj.github.io/js-online-quiz/
 - https://github.com/huirayj/js-online-quiz/tree/main
 
-
 # Resources
 - https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Introduction
 - https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector

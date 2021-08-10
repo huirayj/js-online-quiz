@@ -33,7 +33,8 @@ In the following exercise, the task was to employ web API's and local storage to
 
 ## Usage
 
-- Click on the 
+- Click on the "Start" button to begin.
+- Click the corresponding button to input your choice.
 
 ## Technologies Used
 

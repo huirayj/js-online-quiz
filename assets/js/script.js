@@ -24,7 +24,7 @@ const questionBank = [
     ]
   },
   {
-    question: 'Who developed Javascript?',
+    question: 'Who developed JavaScript?',
     answers: [
       { text: 'Microsoft', correct: false },
       { text: 'Virgin Galatic', correct: false },
